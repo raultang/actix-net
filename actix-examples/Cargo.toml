@@ -1,0 +1,29 @@
+[package]
+name = "actix-examples"
+version = "0.1.0"
+authors = ["Raul <raul.tang.lc@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+actix-codec = { path = "../actix-codec" }
+actix-connect = { path = "../actix-connect" }
+actix-ioframe = { path = "../actix-ioframe" }
+actix-macros = { path = "../actix-macros" }
+actix-rt = { path = "../actix-rt" }
+actix-server = { path = "../actix-server" }
+actix-service = { path = "../actix-service" }
+actix-threadpool = { path = "../actix-threadpool" }
+
+futures-channel = { version = "0.3.4", default-features = false }
+futures-util = { version = "0.3.4", default-features = false, features = ["sink"] }
+
+socket2 = "0.3"
+bytes = "0.5"
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
